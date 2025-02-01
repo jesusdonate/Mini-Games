@@ -1,16 +1,16 @@
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import './App.css';
-import SideBar from './components/SideBar';
+import TicTacToePage from './pages/TicTacToePage';
+import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <div className="flex">
-      <SideBar/>
-      <section className="text-center text-green-500 font-bold ">
-        <p>
-          Hi Mom!
-        </p>
-      </section>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/tic-tac-toe" element={<TicTacToePage />} />
+      </Routes>
+    </Router>
   )
 }
 
