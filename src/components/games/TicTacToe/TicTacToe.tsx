@@ -24,7 +24,7 @@ const TicTacToe = () => {
     : `Next player: ${isXNext ? "X" : "O"}`;
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-green-100">
+    <div className="flex flex-col items-center justify-center h-screen bg-green-400">
       <h1 className="text-2xl font-bold mb-4 bg-red-100">{status}</h1>
       <Board board={board} onCellClick={handleCellClick} />
       <button className="bg-gray-200 w-20 m-3" onClick={restartGame}>
