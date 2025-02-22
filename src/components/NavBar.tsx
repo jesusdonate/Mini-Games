@@ -9,29 +9,31 @@ interface NavBarIconProps {
 // flex flex-col bg-gray-900 text-white shadow-lg
 const NavBar = () => {
   return (
-    <div
-      id="navbar"
-      className="fixed h-11 w-full flex flex-row justify-between bg-gray-500 
-      rounded-full px-4 shadow-lg "
-    >
-      <div className="navbar-left flex flex-row space-x-4 pl-4">
-        <NavBarIcon icon={<FaBars size="20" />} text="Menu" />
-        <NavBarIcon icon={<FaHouse size="20" />} text="Home" />
-      </div>
-
-      {/* TODO: Replace h3 element with search bar */}
+    <header>
       <div
-        id="search-bar"
-        className="flex-grow text-center text-white border-2 border-black"
+        id="navbar"
+        className="fixed h-11 w-full flex flex-row justify-between bg-gray-500 
+        rounded-full px-4 shadow-lg "
       >
-        Search Bar Here
-      </div>
+        <div className="navbar-left flex flex-row space-x-4 pl-4">
+          <NavBarIcon icon={<FaBars size="20" />} text="Menu" />
+          <NavBarIcon icon={<FaHouse size="20" />} text="Home" />
+        </div>
 
-      <div className="navbar-right flex flex-row space-x-4 pr-4">
-        <NavBarIcon icon={<FaUser size="20" />} text="Profile" />
-        <NavBarIcon icon={<FaGear size="20" />} text="Settings" />
+        {/* TODO: Replace h3 element with search bar */}
+        <div
+          id="search-bar"
+          className="flex-grow text-center text-white border-2 border-black"
+        >
+          Search Bar Here
+        </div>
+
+        <div className="navbar-right flex flex-row space-x-4 pr-4">
+          <NavBarIcon icon={<FaUser size="20" />} text="Profile" />
+          <NavBarIcon icon={<FaGear size="20" />} text="Settings" />
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 

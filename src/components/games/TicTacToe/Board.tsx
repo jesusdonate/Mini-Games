@@ -7,11 +7,12 @@ interface BoardProps {
 
 const Board = ({ board, onCellClick }: BoardProps) => {
   return (
-    <div className="grid grid-cols-3 gap-5 w-48 h-48 bg-blue-200">
-      {board.map((value, index) => (
-        <Cell key={index} value={value} onClick={() => onCellClick(index)} />
-      ))}
-    </div>
+    <div className="grid grid-cols-3 grid-rows-3 gap-3 w-full max-w-[400px]
+    aspect-square bg-black">
+  {board.map((value, index) => (
+    <Cell key={index} value={value} onClick={() => onCellClick(index)} />
+  ))}
+</div>
   );
 };
 

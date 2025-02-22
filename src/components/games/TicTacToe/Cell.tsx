@@ -3,10 +3,18 @@ interface CellProps {
   onClick: () => void;
 }
 
+const GetColor = (value: string | null) => {
+  switch (value) {
+    case 'X': return 'text-red-600';
+    case 'O': return 'text-blue-600';
+    default: return '';
+  }
+};
+
 const Cell = ({ value, onClick }: CellProps) => {
   return (
     <button
-      className="bg-green-100 w-13 h-13 hover:bg-gray-300"
+      className={` ${GetColor(value)} bg-gray-200 w-15 h-15 text-5xl font-bold text-red-600 hover:bg-gray-300`}
       onClick={onClick}
     >
       {value}
