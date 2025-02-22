@@ -3,7 +3,12 @@ import Board from "./Board";
 import { FaDoorOpen } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 
-const TicTacToe = () => {
+interface TicTacToeProps {
+  playerX: string;
+  playerO: string;
+}
+
+const TicTacToe = ({playerX, playerO}: TicTacToeProps) => {
   const [board, setBoard] = useState(Array(9).fill(null)); // Creates a 3x3 board
   const [isXNext, setIsXNext] = useState(true); // Keeps track of current player (X or O)
   const [foundWinner, setFoundWinner] = useState(false); // Checks if there is a winner
@@ -53,10 +58,10 @@ const TicTacToe = () => {
   const winner = calculateWinner(board);
   const isDraw = board.every((cell) => cell !== null) && !winner; // Check for a draw
   const status = winner
-    ? `Winner: ${winner}`
+    ? `Winner: ${winner == "X" ? playerX : playerO}`
     : isDraw
     ? "It's a Draw!"
-    : `Next player: ${isXNext ? "X" : "O"}`;
+    : `Next player: ${isXNext ? playerX : playerO}`;
 
   return (
     <div className="flex flex-col items-center justify-center flex-grow pt-12">

@@ -14,7 +14,7 @@ const GetColor = (value: string | null) => {
 const Cell = ({ value, onClick }: CellProps) => {
   return (
     <button
-      className={` ${GetColor(value)} bg-gray-200 w-15 h-15 text-5xl font-bold hover:bg-gray-300`}
+      className={` ${GetColor(value)} bg-primary w-15 h-15 text-5xl font-bold hover:bg-custom-green`}
       onClick={onClick}
     >
       {value}

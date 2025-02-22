@@ -12,7 +12,7 @@ const NavBar = () => {
     <header>
       <div
         id="navbar"
-        className="fixed h-11 w-full flex flex-row justify-between bg-gray-500 
+        className="fixed h-11 w-full flex flex-row justify-between bg-navbar 
         rounded-full px-4 shadow-lg "
       >
         <div className="navbar-left flex flex-row space-x-4 pl-4">

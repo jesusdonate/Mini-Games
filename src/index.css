@@ -8,7 +8,7 @@
     @apply relative flex items-center justify-center h-9 w-9 mt-1 mx-auto
      text-white
     
-    hover:bg-green-400
+    hover:bg-custom-orange
     
     rounded-3xl hover:rounded-xl
     
@@ -19,5 +19,9 @@
     @apply absolute w-auto p-2 m-2 min-w-max top-9 rounded-md shadow-md text-center
     text-white bg-gray-900 text-xs font-bold
     transition-all duration-100 scale-0 origin-top;
+  }
+
+  .bg-orange-pink-gradient {
+    @apply bg-gradient-to-br from-custom-orange to-custom-pink
   }
 }
