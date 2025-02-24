@@ -11,7 +11,7 @@ const GamePreview = ({
 }: GamePreviewProps) => {
   return (
     <div className="flex items-center justify-center animate-fade-in">
-      <div className="pt-20 w-4/5 max-w-[1250px] flex flex-col md:flex-row justify-center">
+      <div className="pt-20 w-4/5 max-w-[1250px] flex flex-col lg:flex-row justify-center">
         {/* Image Container */}
         <div className="flex-1 p-1 bg-orange-pink-gradient rounded-lg md:order-1">
           <img
@@ -21,7 +21,7 @@ const GamePreview = ({
         </div>
 
         {/* Text Container */}
-        <div className="flex-1 pl-0 md:pl-10 shadow-md rounded-lg p-6 bg-secondary md:order-2">
+        <div className="flex-1 pl-10 md:pl-10 shadow-md rounded-lg p-6 bg-secondary md:order-2">
           <h2 className="font-bold italic text-3xl my-10 bg-orange-pink-gradient bg-clip-text text-transparent">
             {nameOfGame}
           </h2>

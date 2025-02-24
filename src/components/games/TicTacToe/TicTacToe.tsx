@@ -6,9 +6,10 @@ import { useNavigate } from "react-router-dom";
 interface TicTacToeProps {
   playerX: string;
   playerO: string;
+  gameMode: string;
 }
 
-const TicTacToe = ({playerX, playerO}: TicTacToeProps) => {
+const TicTacToe = ({playerX, playerO, gameMode}: TicTacToeProps) => {
   const [board, setBoard] = useState(Array(9).fill(null)); // Creates a 3x3 board
   const [isXNext, setIsXNext] = useState(true); // Keeps track of current player (X or O)
   const [foundWinner, setFoundWinner] = useState(false); // Checks if there is a winner
